@@ -2,6 +2,10 @@ import { Header, Nav, Main, Footer } from "./components";
 import * as state from "./store"
 import Navigo from "navigo";
 import { capitalize } from "lodash";
+import axios from "axios";
+import dotenv from "dotenv";
+dotenv.config()
+
 
 const router = new Navigo(window.location.origin);
 
@@ -19,7 +23,20 @@ function render(st) {
   ${Main(st)}
   ${Footer()}
   `;
+  router.updatePageLinks();
+
+  addEventListeners(st);
 }
+
+function addEventListeners(st) {
+
+  document.querySelectorAll("nav a").forEach(navLink =>
+    navLink.addEventListener("click", event => {
+      event.preventDefault();
+      render(state[event.target.title]);
+    })
+  );
+
 
 // add menu toggle to bars icon in nav bar
 document.querySelector(".fa-bars").addEventListener("click", () => {

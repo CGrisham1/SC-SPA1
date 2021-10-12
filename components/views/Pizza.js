@@ -10,4 +10,3 @@ ${st.pizzas
   .join("")}
 </table>
 `;
-

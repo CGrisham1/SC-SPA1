@@ -1,1 +1,1 @@
-This is my practice repo where I'm learning to create my very own SPA.
+This is a Practice Repo I am using to create an SPA

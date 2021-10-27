@@ -18,6 +18,7 @@ const logging = (request, response, next) => {
   next();
 };
 
+// DO NOT ADD CORS TO SERVER INDEX.JS ITS A SECURITY RISK
 // CORS Middleware
 const cors = (req, res, next) => {
   res.setHeader(

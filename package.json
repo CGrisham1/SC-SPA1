@@ -7,15 +7,15 @@
     "parcel-build": "parcel build index.html && cp _redirects ./dist",
     "serve": "parcel index.html",
     "server:watch": "nodemon --watch ./server -e js ./server/index.js",
-    "start": "node ./server/index.js"
+    "start": "node ./server/index.js",
+    "test": "npx jasmine-node spec"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-
+    "jasmine-node": "^3.0.0",
     "nodemon": "^2.0.13"
-
   },
   "dependencies": {
     "axios": "^0.22.0",

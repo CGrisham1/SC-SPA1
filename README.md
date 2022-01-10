@@ -1,1 +1,1 @@
-This is a Practice Repo I am using to create an SPA
+This is a SavvyCoders Practice SPA that was built in-class
